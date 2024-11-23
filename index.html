@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aqib Portfolio</title>
+
+    <style>
+    body{
+      background-color: lightgrey;
+      border: 4px solid black;
+     
+    }
+    header{
+      text-align: center;
+      color: black;
+    }
+    header .tagline{
+        font-size: 25px;
+    }
+
+    #about {
+            display: flex;
+            align-items:center;
+            gap: 20px;
+            padding:20px;
+        }
+        #about img {
+            display:flex;
+            justify-content: end;
+            width: 200px; 
+            height: auto;
+            border-radius: 50%;
+        }
+        #about p {
+            max-width: 1200px;
+            font-size: 17px;
+            
+        }
+    #projects{
+      display: flex;
+      flex-direction: row;
+      padding:20px;
+    }
+    .shopping{
+        margin-left: 10px;
+    }
+    #contact{
+        display:flex;
+        justify-content: center;
+    }
+    #skills{
+        padding: 20px;
+    }
+
+    
+        
+        
+        
+        
+        
+    </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1 class="heading">SHEIK MAHAMMED AQIB</h1>
+    <p class="tagline">(Web Developer)</p>
+  </header>
+ 
+    <section id="about">
+        <p>I am a Web Developer skilled in building and maintaining user-friendly, visually appealing websites. My expertise spans both front-end and back-end development, allowing me to create interactive and responsive web pages while managing server-side functionality and databases. I work with languages like HTML, CSS, JavaScript, and frameworks such as React.js, ensuring that each project meets high standards of performance and usability. My passion for web development drives me to solve problems creatively and collaborate effectively with designers and team members to bring digital ideas to life.</p>
+        
+        <img src="./images/aqib_photo.jpg" alt="Profile Photo" />
+    </section>
+    <hr/>
+    <section id="skills">
+        <h3><u>SKILLS</u></h3>
+        <ul>
+            <li class="skl">Front-end Development: Reactjs, JavaScript, HTML, CSS</li>
+            <li class="skl">Back-end Development: Python</li>
+            <li class="skl">Databases: MySQL, MongoDB</li>
+            <li class="skl">Miscellaneous: C++, Git, GitHub, Postman</li>
+        </ul>
+    </section>
+    <hr />
+    <section id="projects">
+        <h3><u>PROJECTS</u></h3>
+        <h5 class="shopping">Smart Shopping Trolley using IOT</h5>
+        <p>
+        <ul>
+            <li>Engineered a Smart shopping Trolley using IoT technology, automating product tracking and billing processes.</li>
+            <li>Achieved real-time updates to the trolley's memory, resulting in a 50% reduction in manual billing errors.</li>
+            <li>Integrated product detail and pricing features, improving checkout efficiency by 30% and enhancing the shopping experience.</li>
+        </ul>
+        </p>
+        <h5>Hotel Management System (DBMS, SQL, Web Development)</h5>
+        <p>
+        <ul>
+            <li>Developed a Hotel Management System to streamline online booking and reservation processes, reducing manual workload by 40%.</li>
+            <li>Implemented a user-friendly interface for managing hotel rooms and reservations, increasing operational efficiency by 35%.</li>
+            <li>Enabled real-time updates and availability checks, enhancing booking accuracy and reducing double bookings by 20%. Integrated a secure payment gateway, boosting user confidence and increasing online booking transactions by 25%.</li>
+
+        </ul>
+        </p>
+
+    </section>
+    <section id="contact">
+        <h3 id="contact"></h3>
+        <button id="btn" type="button">Show Contact Info</button>
+
+
+    </section>
+
+
+
+
+
+
+</body>
+<script>
+    let Button = document.getElementById("btn");
+    let Contact = document.getElementById("contact");
+    let skills = document.querySelectorAll(".skl");
+
+    Button.addEventListener('click', function() {
+        Contact.textContent = `Contact: 8431843414 Email: aqibsheik5@gmail.com`;
+
+    })
+
+    
+
+
+skills.forEach(function(skill) {
+    skill.addEventListener('mouseover', function() {
+        skill.style.color = "green";
+    });
+});
+
+skills.forEach(function(skill) {
+    skill.addEventListener('mouseout', function() {
+        skill.style.color = "";
+    });
+});
+
+    
+</script>
+
+</html>
